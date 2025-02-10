@@ -1,0 +1,7 @@
+- name: Kontrolli süsteemi andmeid
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Kuvage masina andmed
+      debug:
+        msg: "Masina nimi: {{ inventory_hostname }} | Operatsioonisüsteem: {{ ansible_distribution }} versioon: {{ ansible_distribution_version }} 
