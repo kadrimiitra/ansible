@@ -1,0 +1,10 @@
+- name: Test Windows commands
+  hosts: windows
+  gather_facts: no
+
+  tasks:
+    - name: Kontrolli kes on sisseloginud kasutaja
+      win_command: whoami
+
+    - name: Näita süsteemi infot
+      win_command: systeminfo
